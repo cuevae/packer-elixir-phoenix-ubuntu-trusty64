@@ -1,22 +1,23 @@
-# packer-elixir-phoenix-centos7
+# packer-elixir-phoenix-ubuntu
 
-Creates virtualbox and vmware boxes for Elixir and Phoenix development based on Ubuntu 14.04 (trusty).
+Creates virtualbox and vmware boxes for Elixir and Phoenix development based on Ubuntu 18.04.4 (Bionic Beaver).
 
-Based on Jeff Geerling's [packer-ubuntu-1404](https://github.com/geerlingguy/packer-ubuntu-1404). 
+Based on Jeff Geerling's [packer-ubuntu-1404](https://github.com/geerlingguy/packer-ubuntu-1404).
+Based on Percy Grunwald's [packer-elixir-phoenix-ubuntu-trusty64][https://github.com/percygrunwald/packer-elixir-phoenix-ubuntu-trusty64]
 
-**Current Ubuntu Version Used**: 14.04.4 
+**Current Ubuntu Version Used**: 18.04.4
 
 ## Installed software
 
 All the software required for Phoenix development.
 
-* Erlang 19.0
-* Elixir 1.3.4
+* Erlang 22.2
+* Elixir 1.10
     * Hex (latest)
     * Rebar (latest)
     * Phoenix (latest)
-* PostgreSQL 9.4 (user: postgres, password: postgres)
-* Node.js 5.x
+* PostgreSQL 12.2 (user: postgres, password: postgres)
+* Node.js 12.16.1
 
 Generates two Vagrant box files, for:
 
@@ -39,11 +40,11 @@ The following software must be installed/present on your local machine before yo
 
 Make sure all the required software (listed above) is installed, then cd to the directory containing this README.md file, and run:
 
-    $ packer build elixir-phoenix-ubuntu-trusty64.json
+    $ packer build elixir-phoenix-ubuntu-bionic64.json
 
 After a few minutes, Packer should tell you the box was generated successfully.
 
 If you want to only build a box for one of the supported virtualization platforms (e.g. only build the VMware box), add `--only=vmware-iso` to the `packer build` command:
 
-    $ packer build --only=virtualbox-iso elixir-phoenix-ubuntu-trusty64.json
-    $ packer build --only=vmware-iso elixir-phoenix-ubuntu-trusty64.json    
+    $ packer build --only=virtualbox-iso elixir-phoenix-ubuntu-bionic64.json
+    $ packer build --only=vmware-iso elixir-phoenix-ubuntu-bionic64.json    

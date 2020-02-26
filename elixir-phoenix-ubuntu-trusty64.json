@@ -1,9 +1,9 @@
 {
   "variables": {
-    "box_version": "1.3.4",
-    "box_description": "PostgreSQL admin user/pass: postgres/postgres.\n\nIncludes Erlang 19.0, Elixir 1.3.4, PostgreSQL 9.4, Node.js 5.x and Git.\n\n Github: [pgrunwald/packer-elixir-phoenix-ubuntu-trusty64](https://github.com/pgrunwald/packer-elixir-phoenix-ubuntu-trusty64)",
-    "vm_name": "elixir-phoenix-ubuntu-1404-trusty-x86_64",
-    "atlas_artifact": "pgrunwald/elixir-phoenix-ubuntu-trusty64"
+    "box_version": "1.4.0",
+    "box_description": "PostgreSQL admin user/pass: postgres/postgres.\n\nIncludes Erlang 22.2, Elixir 1.10, PostgreSQL 12.2, Node.js 12.16.1 and Git.\n\n Github: [cuevae/packer-elixir-phoenix-ubuntu-trusty64](https://github.com/cuevae/packer-elixir-phoenix-ubuntu-trusty64)",
+    "vm_name": "elixir-phoenix-ubuntu-1404-bionic-x86_64",
+    "atlas_artifact": "cuevae/packer-elixir-phoenix-ubuntu-trusty64"
   },
   "provisioners": [
     {
@@ -56,11 +56,11 @@
       "headless": true,
       "http_directory": "http",
       "iso_urls": [
-        "iso/ubuntu-14.04.4-server-amd64.iso",
-        "http://releases.ubuntu.com/14.04/ubuntu-14.04.4-server-amd64.iso"
+        "iso/ubuntu-18.04.4-server-amd64.iso",
+        "http://releases.ubuntu.com/bionic/ubuntu-18.04.4-live-server-amd64.iso"
       ],
       "iso_checksum_type": "md5",
-      "iso_checksum": "2ac1f3e0de626e54d05065d6f549fa3a",
+      "iso_checksum": "5c43d0b0ade0b554c2d51c85e5f0095b",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -104,12 +104,12 @@
       "headless": true,
       "http_directory": "http",
       "iso_urls": [
-        "iso/ubuntu-14.04.4-server-amd64.iso",
-        "http://releases.ubuntu.com/14.04/ubuntu-14.04.4-server-amd64.iso"
+        "iso/ubuntu-18.04.4-server-amd64.iso",
+        "http://releases.ubuntu.com/bionic/ubuntu-18.04.4-live-server-amd64.iso"
       ],
       "iso_checksum_type": "md5",
-      "iso_checksum": "2ac1f3e0de626e54d05065d6f549fa3a",
-      "output_directory": "packer-ubuntu-14.04-amd64-vmware",
+      "iso_checksum": "5c43d0b0ade0b554c2d51c85e5f0095b",
+      "output_directory": "packer-ubuntu-18.04-amd64-vmware",
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "ssh_password": "vagrant",
       "ssh_port": 22,

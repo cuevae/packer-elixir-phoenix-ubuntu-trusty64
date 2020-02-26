@@ -1,7 +1,7 @@
 # file: postgresql/defaults/main.yml
 
 # Basic settings
-postgresql_version: 9.3
+postgresql_version: 12.2
 postgresql_encoding: 'UTF-8'
 postgresql_locale_parts:
   - 'en_US' # Locale
@@ -24,7 +24,7 @@ postgresql_ext_install_contrib: no
 postgresql_ext_install_dev_headers: no
 postgresql_ext_install_postgis: no
 
-postgresql_ext_postgis_version: "2.1" # be careful: check whether the postgresql/postgis versions work together
+postgresql_ext_postgis_version: "2.5" # be careful: check whether the postgresql/postgis versions work together
 
 # List of databases to be created (optional)
 postgresql_databases: []

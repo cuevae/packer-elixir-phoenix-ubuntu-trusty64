@@ -39,6 +39,6 @@
     - local.rebar
 
 - name: install phoenix
-  shell: "mix archive.install --force https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez"
+  shell: "mix archive.install hex phx_new {{ phoenix_framework_version }}"
   become: true
   become_user: "{{ elixir_phoenix_user }}"
